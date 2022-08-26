@@ -11,7 +11,7 @@ export default function Medee({ totalPages, currentPage, postSummaries }) {
   return (
     <div>
       {postSummaries ? (
-        <MainLayout classname={`flex flex-col mb-[148.75px] gap-[104px] mx-auto max-w-leadScreen ${PADDINGX}`}>
+        <MainLayout classname={`flex flex-wrap mb-[148.75px] gap-[104px] mx-auto max-w-leadScreen ${PADDINGX}`}>
           <div className="h-[39px] " />
           <PostList posts={postSummaries} totalPages={totalPages} currentPage={currentPage} />
         </MainLayout>

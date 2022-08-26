@@ -1,5 +1,4 @@
 import Typo from 'components/typography'
-import { MainLayout } from 'layout'
 import Lottie from 'react-lottie'
 import star from '../../../public/static/stars.json'
 import cons from '../../../public/static/consult.json'
@@ -46,14 +45,14 @@ export const Prob = () => {
   }
 
   return (
-    <div className="mx-auto max-w-leadScreen mb-[164px] flex flex-col gap-[72px]">
+    <div className="mx-auto max-w-leadScreen md:mb-[164px] mb-[100px] flex flex-col gap-[72px]">
       <div className="flex justify-center">
         <div className="flex flex-col gap-6 max-w-[392px] text-center">
           <Typo variant="h3"> Ямар боломжууд нээгдэх вэ? </Typo>
           <Typo variant="body"> LEAD хөтөлбөрт хамрагдсанаар та бүхэнд дараах боломж олгогдох юм. </Typo>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-14">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-14">
         <PrbComp gif="star" info="Ижил хүсэл эрмэлзэл бүхий залуустай танилцах, тэднээс суралцах, хамтарч ажиллах" />
         <PrbComp gif="consult" info="Салбартаа арвин туршлагатай ментор буюу зөвлөхүүдээс суралцах, зөвлөгөө авах" />
         <PrbComp gif="dem" info="Иргэдийн оролцоотой хэрхэн шийдвэрлэх талаар мэдлэг чадвартай болох юм" />

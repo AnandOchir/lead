@@ -40,8 +40,10 @@ export const GridMain = ({ datas }) => {
     }
   }
   return (
-    <div className={`flex flex-col mx-auto max-w-[1592px] mb-[68.75px] ${PADDINGX}`}>
-      <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative`}>{<Select />}</div>
+    <div className={`flex flex-col mx-auto  mb-[68.75px] justify-center ${PADDINGX}`}>
+      <div className={` flex flex-row flex-wrap  gap-6 md:gap-y-9 relative justify-center overflow-scroll `}>
+        {<Select />}
+      </div>
       <div></div>
     </div>
   )

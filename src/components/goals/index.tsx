@@ -1,8 +1,8 @@
-import Typo from "components/typography";
-import Lottie from "react-lottie";
-import book from '../../../public/static/book.json';
-import reuse from '../../../public/static/reuse.json';
-import stack from '../../../public/static/layers.json';
+import Typo from 'components/typography'
+import Lottie from 'react-lottie'
+import book from '../../../public/static/book.json'
+import reuse from '../../../public/static/reuse.json'
+import stack from '../../../public/static/layers.json'
 
 type Props = {
   gif: string
@@ -12,14 +12,16 @@ type Props = {
 }
 
 export const Goal = (props: Props) => {
-
   const { last = false } = props
 
   const getGifs = (props: string) => {
     switch (props) {
-      case 'book': return book
-      case 'reuse': return reuse
-      case 'stack': return stack
+      case 'book':
+        return book
+      case 'reuse':
+        return reuse
+      case 'stack':
+        return stack
     }
   }
 
@@ -28,9 +30,9 @@ export const Goal = (props: Props) => {
     autoplay: true,
     animationData: getGifs(props.gif),
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
 
   return (
     <div className="flex items-center">
@@ -45,4 +47,4 @@ export const Goal = (props: Props) => {
   )
 }
 
-export default Goal; 
+export default Goal

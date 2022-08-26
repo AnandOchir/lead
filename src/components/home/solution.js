@@ -29,21 +29,17 @@ export const Shiid = (props) => {
       <div className="grid grid-flow-col gap-[150px] ">
         <div>
           <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
-            ШИЙДЭХ, ОРОЛЦОХ,
-          </Typo>
-          <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
-            МЭДЭЛЖИХ ҮЙЛЭЭ
-          </Typo>
-          <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
-            ӨӨРЧЛӨХ НЬ
+            <div>ШИЙДЭХ, ОРОЛЦОХ,</div>
+            <div>МЭДЭЛЖИХ ҮЙЛЭЭ</div>
+            <div>ӨӨРЧЛӨХ НЬ</div>
           </Typo>
           <Typo variant="body" className="text-[#0F233E] mt-[20px] md:mt-[40px]">
             Тэгш хамарсан хөгжлийн арга хэрэгсэл, заавар
           </Typo>
 
           <div className="flex items-center mt-[48px] md:mt-[96px]" onClick={saveFile}>
-            <div className="relative bg-slate-200 w-14 h-14 rounded-full hover:cursor-pointer">
-              <img src="/static/Group.svg" className="absolute left-[20px] top-[16px]" />
+            <div className=" bg-slate-200 w-14 h-14 rounded-full hover:cursor-pointer flex justify-center items-center">
+              <img src="/static/Group.svg" />
             </div>
             <Typo variant="body-semibold" className="ml-5 hover:cursor-pointer text-[#404040]">
               Шийд арга хэрэгслийг татах

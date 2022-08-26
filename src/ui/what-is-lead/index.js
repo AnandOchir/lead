@@ -5,7 +5,7 @@ import { Topic } from './topic'
 
 export const Home = ({ datas }) => {
   return (
-    <div className="flex flex-col mx-auto max-w-leadScreen">
+    <div className="flex flex-col mx-auto max-w-leadScreen ">
       <Lead datas={datas} />
       <Map />
       <Topic />

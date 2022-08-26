@@ -37,17 +37,19 @@ export const News = ({ datas }) => {
       whileInView={'visible'}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col gap-[44px] md:gap-[88px]">
+      <div className="flex flex-col gap-[44px] md:gap-[88px] justify-center">
         <div>
-          <Typography variant={matches ? 'h3' : 'h1'} className="justify-center flex">
+          <Typography variant={matches ? 'h3' : 'h1'} className=" text-center">
             Шинэ Мэдээ, Мэдээлэл
           </Typography>
         </div>
-        <div className="grid grid-rows-2 grid-flow-col gap-4">
+
+        <div className="grid grid-rows-1 grid-flow-col gap-3 lg:grid-rows-2 overflow-auto w-100 ">
           {datas.items.map((x, i) => {
             return (
               <div
-                className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px] cursor-pointer"
+                className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] 
+                 max-w-[301px] md:max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px] cursor-pointer"
                 key={i}
                 onClick={() => (window.location.href = `/news/${x.id}`)}
               >

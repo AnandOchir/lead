@@ -26,17 +26,17 @@ export const Lead = ({ datas }) => {
   }
 
   return (
-    <div className="flex md:mt-[300px]">
+    <div className="flex md:mt-[300px] mt-[100px] justify-center">
       <div className="flex flex-col gap-[64px]">
         <div className="flex flex-col gap-[24px]">
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <img src="/static/lead-Vector-logo.svg" className="w-[115px]" />
             <Typography className="text-primary-main" variant="h1">
               ХӨТӨЛБӨР
             </Typography>
           </div>
           <div>
-            <Typography className="md:w-[496px] lg:w-[496px]" variant="body">
+            <Typography className="md:w-[496px] w-[300px]s lg:w-[496px] text-center " variant="body">
               LEAD Mongolia хөтөлбөр нь төрийн болон төрийн бус байгууллага, хувийн хэвшил зэрэг төрөл бүрийн салбарын
               шинэ залуу манлайлагчдыг нэгтгэн, нийгэмд тулгамдаж буй асуудалд гарц шийдэл олох зорилготой.{' '}
             </Typography>
@@ -44,34 +44,36 @@ export const Lead = ({ datas }) => {
         </div>
 
         <div className="flex gap-20 items-center md:items-start">
-          <div className="flex items-center gap-3">
-            <div className="h-[56px] w-[56px] text-blue bg-grey flex justify-center items-center rounded-full">
-              {handleIcon({
-                icon: 'facebook',
-                size: '32',
-              })}
+          <div className="flex items-center gap-3 md:justify-between justify-around w-full">
+            <div className="flex items-center justify-center">
+              <div className=" text-blue bg-grey flex justify-center items-center rounded-full">
+                {handleIcon({
+                  icon: 'facebook',
+                  size: '32',
+                })}
+              </div>
+              <div className="flex flex-col gap-1">
+                <Typography variant="body" className="text-text-grey">
+                  Бидэнтэй холбогдох
+                </Typography>
+                <Typography
+                  className="underline cursor-pointer"
+                  variant="Button / Link"
+                  onClick={() => window.open('https://www.facebook.com/LEADAlumniAssociation', '_blank')}
+                >
+                  Фэйсбүүк-рүү үсрэх
+                </Typography>
+              </div>
             </div>
-            <div className="flex flex-col gap-1">
-              <Typography variant="body" className="text-text-grey">
-                Бидэнтэй холбогдох
-              </Typography>
-              <Typography
-                className="underline cursor-pointer"
-                variant="Button / Link"
-                onClick={() => window.open('https://www.facebook.com/LEADAlumniAssociation', '_blank')}
-              >
-                Фэйсбүүк-рүү үсрэх
-              </Typography>
+            <div className="flex-col flex gap-1">
+              <Typography className="text-base font-semibold text-text-grey1">ГИШҮҮД:</Typography>
+              <Typography variant="body-bold"> {datas.workersQuantity} </Typography>
             </div>
-          </div>
-          <div className="flex-col flex gap-1">
-            <Typography className="text-base font-semibold text-text-grey1">ГИШҮҮД:</Typography>
-            <Typography variant="body-bold"> {datas.workersQuantity} </Typography>
           </div>
         </div>
       </div>
       <motion.div
-        className="hidden md:block lg:block relative w-[690px] -top-[101px] -right-32 h-[690px]"
+        className="hidden 2xl:block relative w-[690px] -top-[101px] -right-32 h-[690px]"
         whileHover="visible"
         variants={container}
         transition={{ duration: 1.5 }}

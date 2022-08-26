@@ -27,13 +27,15 @@ export const HomeFirst = () => {
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <div className={`flex-row flex mx-auto py-12 max-w-leadScreen ${PADDINGX} w-full relative`}>
+    <div
+      className={`flex-row flex mx-auto py-12 max-w-leadScreen ${PADDINGX} w-full relative justify-center md:justify-start`}
+    >
       <motion.div
         variants={container}
         initial="hidden"
         whileInView={'visible'}
         viewport={{ once: false }}
-        className="flex flex-col"
+        className="flex flex-col "
       >
         <div className="flex flex-col gap-6 md:gap-[104px] mt-16  md:mt-32">
           <div className="flex-col flex gap-2 md:gap-10">
@@ -76,7 +78,7 @@ export const HomeFirst = () => {
           </motion.div>
         </div>
       </motion.div>
-      <div className="w-[818px] hidden md:block absolute top-[2px] left-[550px]">
+      <div className="w-[818px] hidden lg:block  absolute top-[2px] left-[550px]">
         <img src="/static/home1.jpg" />
       </div>
     </div>

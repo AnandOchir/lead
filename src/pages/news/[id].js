@@ -42,7 +42,7 @@ export const SpecNews = ({ news, para }) => {
               className="flex items-center text-primary-main cursor-pointer gap-[13px]"
               onClick={() => (window.location.href = '/news/page')}
             >
-              <img src="/static/ret.png" alt="" className="w-[21px] h-[21px]" /> Буцах
+              <img src="/static/ret.png" alt="" className="w-[21px] h-[21px] lg:ml-[220px] ml-0" /> Буцах
             </Typo>
             <div className="flex flex-col gap-8 mt-[42px] max-w-leadScreen mx-auto">
               <Typo variant="h3" className="text-primary-dark">

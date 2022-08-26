@@ -31,7 +31,7 @@ export const GirdPic = (props) => {
   }
 
   return (
-    <div className="w-full overflow-hidden relative cursor-pointer" onClick={() => (window.location.href = link)}>
+    <div className="w-100 overflow-hidden relative cursor-pointer" onClick={() => (window.location.href = link)}>
       <div
         className={`flex  `}
         onMouseEnter={() => {

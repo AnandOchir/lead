@@ -13,12 +13,12 @@ export default function PostList(props) {
 
   return (
     <>
-      <div className="grid grid-rows-3 grid-flow-col gap-4">
+      <div className="flex flex-col md:flex-row flex-wrap gap-4">
         {posts &&
           posts.map((x, i) => {
             return (
               <div
-                className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px] cursor-pointer"
+                className="flex flex-col gap-6 rounded-lg w-[334px] md:w-[370px] shadow-[0_0_24px_rgba(0,0,0,0.05)] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px] cursor-pointer"
                 key={i}
                 onClick={() => (window.location.href = `/news/${x.id}`)}
               >

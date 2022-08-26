@@ -3,8 +3,9 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { PADDINGX } from 'constants/layout'
-import CustomAccordion, { AccordionDetailsWithLink } from 'components/CustomAccordion'
+import { AccordionDetailsWithLink } from 'components/CustomAccordion'
 import MenuToggle from './MenuToggle'
+import Image from 'next/image'
 
 export const Header = () => {
   const router = useRouter()
@@ -32,11 +33,13 @@ export const Header = () => {
   return (
     <div className={`border-b fixed z-50 w-full bg-white`}>
       <div className={`mx-auto max-w-leadScreen flex justify-between items-center ${PADDINGX}  w-full`}>
-        <img
+        <Image
+          width={140}
+          height={40}
           onClick={() => handleChangeMenu('/')}
           src="/static/lead-logo.svg"
           alt=""
-          className="flex h-40 w-140 hover:cursor-pointer md:flex "
+          className="flex hover:cursor-pointer md:flex "
         />
         <MenuToggle
           isOpen={showMobileMenu}
@@ -83,12 +86,6 @@ export const Header = () => {
                 Мэдээ
               </Typography>
             </AccordionDetailsWithLink>
-          </div>
-          <div className="hidden lg:block">
-            <CustomAccordion items={[]} />
-          </div>
-          <div onClick={() => handleChangeMenu('lead')} className=" hover:cursor-pointer">
-            Lead
           </div>
         </div>
         <div className="hidden md:flex gap-20 lg:flex">
