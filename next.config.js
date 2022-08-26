@@ -8,12 +8,15 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   trailingSlash: true,
-}
-
-module.exports = nextConfig
-
-module.exports = {
   images: {
     domains: ['images.ctfassets.net'],
   },
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
+  pageExtensions: ['js', '[id].js', '[page].js', 'index.js'],
 }
+
+module.exports = nextConfig
