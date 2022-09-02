@@ -3,16 +3,15 @@
 import { Typography } from 'components'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import router from 'next/router'
+import Link from 'next/link'
 
 export const Support = ({ className }) => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div className={`mt-[100px] max-w-leadScreen mx-auto ${className}`}>
-      <Typography
-        variant={matches ? 'body-mobile' : 'h1'}
-        className="flex justify-center md:text-left text-center text-[#0F233E]"
-      >
+      <Typography variant={matches ? 'body-mobile' : 'h1'} className="flex justify-center text-center text-[#0F233E]">
         Биднийг дэмжигч, хамтрагч байгууллагууд
       </Typography>
 
@@ -21,10 +20,25 @@ export const Support = ({ className }) => {
           Бид ардчилал, хүний эрх, залуусын оролцоог дэмжигч дотоод, гадаадын байгууллагуудтай идэвхитэй хамтран
           ажилладаг
         </Typography>
-        <div className="flex justify-center gap-y-10 items-center md:items-start flex-row md:space-x-[150px] mt-[83px] mb-[170px]">
-          <img src="/static/IRI.svg" className="md:w-[240px] md:h-[195px] w-[104px]" />
-          <img src="/static/wole.svg" className="md:w-[300px] md:h-[196px] w-[104px] " />
-          <img src="/static/usaid.svg" className="md:w-[300px] md:h-[193px] w-[104px] " />
+        <div className="flex justify-center items-center md:items-start xl:flex-row flex-col gap-20 mt-[83px] mb-[170px]">
+          <a href="https://www.iri.org/" target="_blank">
+            <img
+              src="https://www.iri.org/wp-content/uploads/2022/01/IRI_logotype.png"
+              className="md:w-[420px] md:h-[95px] w-[304px] cursor-pointer"
+            />
+          </a>
+          <a href="https://www.worldlearning.org/" target="_blank">
+            <img
+              src="https://monarch2monarch.org/wp-content/uploads/2022/02/image-7.png"
+              className="md:w-[420px]   md:h-[96px] w-[304px] cursor-pointer"
+            />
+          </a>
+          <a href="https://www.usaid.gov/" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/USAID-Identity.svg/2560px-USAID-Identity.svg.png"
+              className="md:w-[420px]  md:h-[93px] w-[304px] cursor-pointer"
+            />
+          </a>
         </div>
       </div>
     </div>

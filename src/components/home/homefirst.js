@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Typography } from 'components'
 import { motion } from 'framer-motion'
 import { useTheme } from '@mui/material/styles'
@@ -37,7 +38,7 @@ export const HomeFirst = () => {
         viewport={{ once: false }}
         className="flex flex-col "
       >
-        <div className="flex flex-col gap-6 md:gap-[104px] mt-16  md:mt-32">
+        <div className="flex flex-col gap-6 md:gap-[105px] mt-16  md:mt-32">
           <div className="flex-col flex gap-2 md:gap-10">
             <motion.div
               className="w-[231px] md:w-496  "
@@ -71,6 +72,7 @@ export const HomeFirst = () => {
             <img
               src="/static/play.png"
               className="bg-slate-100 w-7 h-7 md:w-14 md:h-14 rounded-full hover:cursor-pointer"
+              alt="img"
             />
             <Typography variant={matches ? 'subhead' : 'body-semibold'} className="ml-5 hover:cursor-pointer">
               Бичлэг үзэх
@@ -78,7 +80,7 @@ export const HomeFirst = () => {
           </motion.div>
         </div>
       </motion.div>
-      <div className="w-[818px] hidden lg:block  absolute top-[2px] left-[550px]">
+      <div className=" hidden lg:block  absolute top-[2px] left-[550px] ">
         <img src="/static/home1.jpg" />
       </div>
     </div>
