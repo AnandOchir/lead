@@ -3,8 +3,6 @@
 import { Typography } from 'components'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import router from 'next/router'
-import Link from 'next/link'
 
 export const Support = ({ className }) => {
   const theme = useTheme()
